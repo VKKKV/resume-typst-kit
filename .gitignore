@@ -1,0 +1,7 @@
+# 渲染产物一律不入库: typst 在 PDF 内嵌创建时间戳, 每次构建二进制都不同,
+# 忽略产物后 build.sh 可反复执行且 git status 保持干净
+# 例外: example/resume-preview.png 是可复现的(不含时间戳, 每次构建字节一致),
+#       作为 README 演示图提交
+*.pdf
+*.png
+!example/resume-preview.png
